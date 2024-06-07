@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="org.meetcute.network.data.model.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.My_Profile_Activity">
+
+
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="14dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/MyProfile" />
+
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingBottom="90dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/rlTop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivCrown"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/home_profile"
+                        app:loadCircleImage="@{user.profileImage}" />
+
+                    <ImageView
+                        android:id="@+id/ivEditBasicInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="13dp"
+                        android:src="@drawable/edit_icon_new" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        style="@style/Text20Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivCrown"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="34dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="@{user.name}"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvfirst"
+                        style="@style/Text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_marginTop="8dp"
+                        android:layout_toStartOf="@id/tvview"
+                        android:text="@{`ID: ` + user.username}"
+                        android:textColor="#8F9BB3"
+                        android:textSize="14sp" />
+
+
+                    <View
+                        android:id="@+id/tvview"
+                        android:layout_width="3dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/tvName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#2E3A59" />
+
+                    <ImageView
+                        android:id="@+id/ivFlag"
+                        android:layout_width="32dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/tvName"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/tvview"
+                        app:setCountryFlag="@{user.country}" />
+
+                    <TextView
+                        android:id="@+id/tvsecomd"
+                        style="@style/Text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_alignBottom="@id/ivFlag"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/ivFlag"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="@{user.country}"
+                        android:textColor="#8F9BB3"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_cursor"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:ignore="NestedWeights">
+
+
+                        <TextView
+                            android:id="@+id/tvfirsttxt"
+                            style="@style/Text14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="44dp"
+                            android:layout_marginTop="16dp"
+                            android:text="follower" />
+
+                        <TextView
+                            style="@style/Text20Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvfirsttxt"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="44dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@{` `+user.followers}" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/tvsecondtxt"
+                            style="@style/Text14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="44dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Earned" />
+
+                        <TextView
+                            style="@style/Text20Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvsecondtxt"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="44dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@{`$`+user.wallet}" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/tvview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#2E3A59" />
+
+                <LinearLayout
+                    android:id="@+id/llVideoCallRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/whitebck"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Text16Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="16dp"
+                        android:text="Video Call Rate" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/coin" />
+
+                    <TextView
+                        style="@style/Text16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:gravity="center"
+                        android:text="@{user.videoCallRate+`/m`}" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlGoLive"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/stroke_gradient_30"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <org.meetcute.view.customViews.RippleBackground
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                app:rb_color="#E50914"
+                                app:rb_duration="700"
+                                app:rb_radius="8dp"
+                                app:rb_rippleAmount="1"
+                                app:rb_scale="3.5"
+                                app:rb_type="fillRipple">
+
+                                <ImageView
+                                    android:layout_width="42dp"
+                                    android:layout_height="42dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/video_call" />
+
+                            </org.meetcute.view.customViews.RippleBackground>
+
+                            <TextView
+                                style="@style/Text16Bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="6dp"
+                                android:text="Go Live" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="gone">
+
+                        <org.meetcute.view.customViews.VideoCallImage
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:scaleType="fitXY" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvAbout"
+                        style="@style/Text16Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="12dp"
+                        android:layout_marginStart="16dp"
+                        android:text="About You" />
+
+                    <ImageView
+                        android:id="@+id/ivEditBio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="13dp"
+                        android:src="@drawable/edit_icon_new" />
+
+                    <TextView
+                        style="@style/Text16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAbout"
+                        android:layout_marginHorizontal="18dp"
+                        android:text="@{user.aboutYourSelf}" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/tvview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="22dp"
+                    android:background="#2E3A59" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvBasic"
+                        style="@style/Text16Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="12dp"
+                        android:layout_marginStart="16dp"
+                        android:text="Additional Information" />
+
+                    <ImageView
+                        android:id="@+id/ivAdditionalInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="13dp"
+                        android:src="@drawable/edit_icon_new" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBasicInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    tools:listitem="@layout/card_basic" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvStories"
+                        style="@style/Text16Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="12dp"
+                        android:layout_marginStart="16dp"
+                        android:text="Stories" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvStories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/card_stories" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="36dp"
+                        android:background="@android:color/transparent"
+                        app:tabGravity="fill"
+                        app:tabIconTint="@color/tab_icon_tint"
+                        app:tabIndicatorColor="#EF32D7"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabIndicatorHeight="2dp"
+                        app:tabInlineLabel="true"
+                        app:tabMode="auto"
+                        app:tabSelectedTextAppearance="@style/CustomTabItemStyleSelected"
+                        app:tabSelectedTextColor="#EF32D7"
+                        app:tabTextAppearance="@style/CustomTabItemStyle"
+                        app:tabTextColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/ivEditLoopCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tabLayout"
+                        android:layout_alignBottom="@+id/tabLayout"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="13dp"
+                        android:src="@drawable/edit_icon_new" />
+
+                </RelativeLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="375dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvHashtags"
+                        style="@style/Text16Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="12dp"
+                        android:layout_marginStart="16dp"
+                        android:text="Hashtags" />
+
+                    <ImageView
+                        android:id="@+id/ivEditHashtag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="13dp"
+                        android:src="@drawable/edit_icon_new" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHashtags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingBottom="24dp"
+                    app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

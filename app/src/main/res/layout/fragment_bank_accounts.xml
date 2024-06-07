@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="org.meetcute.viewModel.BasicInfoViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/flNext"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text16Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="24dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Setup your Bank Account" />
+
+                <org.meetcute.view.customViews.AppEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="0dp"
+                    app:editTextHint="ICIC"
+                    app:isTitle="true"
+                    app:editTextModel="@{viewModel.bankName}"
+                    app:title="Bank Name" />
+
+                <org.meetcute.view.customViews.AppEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    app:editTextHint="Sharnya"
+                    app:isTitle="true"
+                    app:editTextModel="@{viewModel.bankHolderName}"
+                    app:title="Account Holder Name" />
+
+                <org.meetcute.view.customViews.AppEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    app:editTextHint="654654654651"
+                    app:editTextModel="@{viewModel.bankAccountNumber}"
+                    app:isTitle="true"
+                    app:input="digit"
+                    app:title="Account Number" />
+
+                <org.meetcute.view.customViews.AppEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    app:editTextHint="ICIC0000556"
+                    app:isTitle="true"
+                    app:editTextModel="@{viewModel.ifscCode}"
+                    app:title="IFSC (Optional)" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <org.meetcute.view.customViews.AppButton
+            android:id="@+id/flNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:buttonText="Next"
+            app:isIcon="true" />
+
+    </RelativeLayout>
+</layout>

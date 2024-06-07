@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_backgournd"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/yellowflag" />
+
+            <TextView
+                style="@style/Text24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/dialogflag" />
+
+
+            <TextView
+                android:id="@+id/tvFake"
+                style="@style/Text16Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:drawablePadding="8dp"
+                android:text="@string/FakeProfile"
+                app:drawableStartCompat="@drawable/selector_check_icon" />
+
+            <TextView
+                android:id="@+id/tvNeg"
+                style="@style/Text16Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:text="Negative Attitude"
+                app:drawableStartCompat="@drawable/selector_check_icon" />
+
+            <TextView
+                android:id="@+id/tvInapp"
+                style="@style/Text16Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:text="Inappropriate Content"
+                app:drawableStartCompat="@drawable/selector_check_icon" />
+
+            <TextView
+                android:id="@+id/tvRude"
+                style="@style/Text16Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:text="Rude Behavior"
+                app:drawableStartCompat="@drawable/selector_check_icon" />
+
+            <TextView
+                android:id="@+id/tvLorem"
+                style="@style/Text16Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:text="Lorem Ipsum"
+                app:drawableStartCompat="@drawable/selector_check_icon" />
+
+
+            <TextView
+                style="@style/Text14italic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
+                android:drawablePadding="8dp"
+                android:text="@string/NoteUponreport" />
+
+            <org.meetcute.view.customViews.AppButton
+                android:id="@+id/btnNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                app:buttonText="No" />
+
+            <FrameLayout
+                android:id="@+id/flDontAllow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/gradient_stroke_24dp">
+
+                <TextView
+                    style="@style/Text16Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="13dp"
+                    android:drawablePadding="10dp"
+                    android:text="Yes" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</layout>

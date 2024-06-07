@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_backgournd"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/meetcute_logo" />
+
+        <TextView
+            style="@style/Text16Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/meetcute_needs_to_have_access_to_get_below_access_so_that_you_can_make_friends" />
+
+
+        <TextView
+            style="@style/Text20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:drawablePadding="12dp"
+            android:text="Camera Access"
+            app:drawableEndCompat="@drawable/circle_white_stroke"
+            app:drawableStartCompat="@drawable/camera_two" />
+
+        <TextView
+            style="@style/Text20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="12dp"
+            android:text="Microphone Access"
+            app:drawableEndCompat="@drawable/check_white_tick"
+            app:drawableStartCompat="@drawable/mic_two" />
+
+        <TextView
+            style="@style/Text20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="12dp"
+            android:text="Notification Access"
+            app:drawableEndCompat="@drawable/check_white_tick"
+            app:drawableStartCompat="@drawable/notification_two" />
+
+        <org.meetcute.view.customViews.AppButton
+            android:id="@+id/btnAllow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:buttonText="Allow camera" />
+
+    </LinearLayout>
+</layout>

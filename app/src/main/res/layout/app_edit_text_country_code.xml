@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="org.meetcute.appUtils.EditTextCountryModel" />
+
+        <import type="android.view.View" />
+
+        <import type="org.meetcute.appUtils.EditTextCountryModel" />
+    </data>
+
+    <merge>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:background="#040408"
+            android:elevation="0.1dp"
+            android:paddingHorizontal="4dp"
+            android:text="Email"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_background">
+
+            <ImageView
+                android:id="@+id/ivCountryFlag"
+                android:layout_width="32dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                app:imageRes="@{model.countryFlag}" />
+
+            <EditText
+                android:id="@+id/editText"
+                style="@style/EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@drawable/drop_down"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingHorizontal="16dp"
+                android:text="@={model.countryName}" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvError"
+            style="@style/Text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llContent"
+            android:layout_marginTop="2dp"
+            android:paddingHorizontal="4dp"
+            android:text="@{model.error}"
+            android:textColor="@color/red"
+            android:visibility="@{model.error == null ? View.GONE : View.VISIBLE}" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/Text14"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/llContent"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/red" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignBottom="@id/llContent"
+            android:visibility="invisible" />
+
+    </merge>
+
+</layout>

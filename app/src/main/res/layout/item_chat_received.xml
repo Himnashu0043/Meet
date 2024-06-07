@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/llToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/viViews"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@color/divider"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToday"
+                app:layout_constraintEnd_toStartOf="@id/tvToday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvToday" />
+
+            <TextView
+                android:id="@+id/tvToday"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:text="@string/Today"
+                android:textColor="#8F9BB3"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viViews2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="40dp"
+                android:layout_weight="1"
+                android:background="@color/divider"
+                app:layout_constraintBottom_toBottomOf="@+id/tvToday"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvToday"
+                app:layout_constraintTop_toTopOf="@+id/tvToday" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/tvItemChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llToday"
+            app:layout_goneMarginTop="0dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tvChat"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@id/ivProfile"
+                android:background="@drawable/txt_chats"
+                android:backgroundTint="#0095FF"
+                android:maxWidth="240dp"
+                android:visibility="visible"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                android:text="Absolutely yes. Thanks for subscribed me 🥹"
+                android:textSize="14sp" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/tvimg"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                app:shapeAppearanceOverlay="@style/service_10_imge_shapeable_overloay"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="3dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:layout_marginBottom="4dp"
+                android:layout_toEndOf="@id/ivProfile"
+                android:src="@drawable/home_profile"
+               />
+
+            <TextView
+                android:id="@+id/tvMint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvChat"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/ivProfile"
+                android:text="Just now"
+                android:textColor="#C5CEE0" />
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignTop="@+id/tvMint"
+                android:layout_alignBottom="@+id/tvMint"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="1dp"
+                android:src="@drawable/home_profile" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

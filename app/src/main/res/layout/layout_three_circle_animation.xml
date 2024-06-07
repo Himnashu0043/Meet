@@ -1,0 +1,38 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/ivThree"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_fade"
+        android:backgroundTint="#4dffffff"
+        android:elevation="1dp" />
+
+
+    <View
+        android:id="@+id/ivTwo"
+        android:layout_width="214dp"
+        android:layout_height="214dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_fade"
+        android:backgroundTint="#4dffffff"
+        android:elevation="2dp" />
+
+    <View
+        android:id="@+id/ivOne"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle_fade"
+        android:backgroundTint="#4dffffff"
+        android:elevation="3dp" />
+
+    <ImageView
+        android:id="@+id/ivContent"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_centerInParent="true"
+        android:elevation="4dp"
+        android:src="@drawable/home_profile" />
+</merge>

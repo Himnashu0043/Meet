@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true">
+        <layer-list>
+            <item android:drawable="@drawable/circle_fade"/>
+            <item android:drawable="@drawable/contest_started"
+                android:top="16dp"
+                android:bottom="16dp"
+                android:start="16dp"
+                android:end="16dp"
+                />
+        </layer-list>
+    </item>
+    <item  android:state_selected="false">
+        <layer-list>
+            <item android:drawable="@drawable/circle_fade"/>
+            <item android:drawable="@drawable/contest_stopped"
+                android:top="16dp"
+                android:bottom="16dp"
+                android:start="16dp"
+                android:end="16dp"
+                />
+        </layer-list>
+    </item>
+</selector>

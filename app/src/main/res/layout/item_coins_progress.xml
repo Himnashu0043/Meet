@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:id="@+id/lay"
+    android:orientation="horizontal"
+    android:paddingStart="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:id="@+id/FirstLay"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        
+        <TextView
+            android:id="@+id/tvContFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text12"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:text="cute_naina"
+            app:layout_constraintTop_toBottomOf="@id/ivConProfile"
+            app:layout_constraintStart_toStartOf="@id/ivConProfile"
+            />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivConProfile"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="-6dp"
+            android:background="@drawable/yellow_ring"
+            android:elevation="2dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:padding="1dp"
+            android:src="@drawable/profilephoto"
+            app:layout_constraintTop_toBottomOf="@id/ivCoin" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignStart="@id/ivConProfile"
+            android:layout_alignBottom="@id/ivConProfile"
+            android:layout_marginStart="-4dp"
+            android:layout_marginBottom="-4dp"
+            android:background="@drawable/green_circle"
+            android:backgroundTint="#D9D9D9"
+            android:elevation="2dp"
+            android:padding="1dp"
+            android:src="@drawable/diamonds"
+            app:layout_constraintBottom_toBottomOf="@+id/ivConProfile"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivCoin"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/coin"
+            app:layout_constraintStart_toEndOf="@+id/ivConProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Text12"
+            android:id="@+id/tvContfirstCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCoin"
+            app:layout_constraintStart_toEndOf="@+id/ivCoin"
+            app:layout_constraintTop_toTopOf="@+id/ivCoin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginStart="12dp"
+            android:background="@color/yellow"
+            app:layout_constraintBottom_toBottomOf="@+id/ivConProfile"
+            app:layout_constraintTop_toTopOf="@+id/ivConProfile"
+            tools:layout_editor_absoluteX="4dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:id="@+id/secondLay"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/tvContSecName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text12"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:text="cute_naina"
+            app:layout_constraintTop_toBottomOf="@id/ivProfileTwo"
+            app:layout_constraintStart_toStartOf="@id/ivProfileTwo"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfileTwo"
+            android:layout_width="22dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            android:layout_height="22dp"
+            android:layout_marginTop="-6dp"
+            android:background="@drawable/yellow_ring"
+            android:elevation="2dp"
+            android:padding="1dp"
+            android:src="@drawable/profilephoto"
+            app:layout_constraintTop_toBottomOf="@id/ivCoin2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignStart="@id/ivProfileTwo"
+            android:layout_alignBottom="@id/ivProfileTwo"
+            android:layout_marginStart="-4dp"
+            android:layout_marginBottom="-4dp"
+            android:background="@drawable/green_circle"
+            android:backgroundTint="#D9D9D9"
+            android:elevation="2dp"
+            android:padding="1dp"
+            android:src="@drawable/diamonds"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfileTwo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivCoin2"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/coin"
+            app:layout_constraintStart_toEndOf="@+id/ivProfileTwo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Text12"
+            android:id="@+id/tvConstSecondCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCoin2"
+            app:layout_constraintStart_toEndOf="@+id/ivCoin2"
+            app:layout_constraintTop_toTopOf="@+id/ivCoin2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginStart="12dp"
+            android:background="@color/yellow"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfileTwo"
+            app:layout_constraintTop_toTopOf="@+id/ivProfileTwo"
+            tools:layout_editor_absoluteX="4dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:id="@+id/third"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfile3"
+            android:layout_width="22dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:layout_constraintStart_toEndOf="@id/tvCoin3"
+            android:layout_height="22dp"
+            android:layout_marginTop="-6dp"
+            android:background="@drawable/yellow_ring"
+            android:elevation="2dp"
+            android:padding="1dp"
+            android:src="@drawable/profilephoto"
+            app:layout_constraintTop_toBottomOf="@id/ivCoin3" />
+
+
+        <TextView
+            style="@style/Text12"
+            android:id="@+id/tvConstThirdName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="cute_naina"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfile3"
+            app:layout_constraintTop_toBottomOf="@id/ivProfile3" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignStart="@id/ivProfile3"
+            android:layout_alignBottom="@id/ivProfile3"
+            android:layout_marginStart="-4dp"
+            android:layout_marginBottom="-4dp"
+            android:background="@drawable/green_circle"
+            android:backgroundTint="#D9D9D9"
+            android:elevation="2dp"
+            android:padding="1dp"
+            android:src="@drawable/diamonds"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfile3"
+            app:layout_constraintStart_toStartOf="@id/ivProfile3"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfile3" />
+
+        <ImageView
+            android:id="@+id/ivCoin3"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/coin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCoin3"
+            style="@style/Text12"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/ivCoin3"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:background="@color/yellow"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProfile3"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfile3"
+            app:layout_constraintTop_toTopOf="@+id/ivProfile3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+

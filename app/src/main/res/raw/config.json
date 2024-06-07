@@ -1,0 +1,18 @@
+{
+  "uid": "1",
+  "appId": "",
+  "channelName": "demo",
+  "token": "",
+  "proxyUrl": "http://localhost:8080/",
+  "serverUrl": "",
+  "tokenExpiryTime": "3600",
+  "encryptionMode": 1,
+  "salt": "",
+  "cipherKey": "",
+  "presenceTimeout": 600,
+  "logUpload": false,
+  "logLevel": "debug",
+  "cloudProxy": true,
+  "useStringUserId": false,
+  "rtcToken": ""
+}

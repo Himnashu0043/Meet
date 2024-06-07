@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryOne">#FD2A60</color>
+    <color name="primaryTwo">#9952DF</color>
+
+
+    <color name="primaryOneFade">#40FD2A60</color>
+    <color name="primaryTwoFade">#409952DF</color>
+
+
+
+    <color name="unselectedGray">#7B7B7B</color>
+    <color name="hintTextColor">#7B7B7B</color>
+    <color name="red">#F5222D</color>
+    <color name="pink">#EF32D7</color>
+    <color name="green">#1BD737</color>
+    <color name="infoTextColor">#99FFFFFF</color>
+    <color name="secondaryColor">#8F9BB3</color>
+    <color name="bottomSheetBackground">#E6000000</color>
+    <color name="backgroundCircle">#101426</color>
+    <color name="yellow">#FFC107</color>
+    <color name="divider">#8F9BB3</color>
+    <color name="dividerTwo">#373737</color>
+</resources>

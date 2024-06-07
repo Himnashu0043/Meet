@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/home_profile"
+                app:layout_constraintBottom_toBottomOf="@+id/tvChat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvChat" />
+
+            <TextView
+                android:id="@+id/tvChat"
+                style="@style/Text14"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toEndOf="@id/ivProfile"
+                android:background="@drawable/txt_chats"
+                android:backgroundTint="#0095FF"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.razzaghimahdi78.dotsloading.linear.LoadingScaly
+                android:id="@+id/rrr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:dots_color="@color/white"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                app:dots_count="3"
+                app:dots_size="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvChat"
+                app:layout_constraintEnd_toEndOf="@+id/tvChat"
+                app:layout_constraintStart_toStartOf="@+id/tvChat"
+                app:layout_constraintTop_toTopOf="@+id/tvChat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

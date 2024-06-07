@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingGiftActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/cutting" />
+
+            <TextView
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="115dp"
+                android:text="@string/Settings"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/ivCrown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/crown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCrown"
+                android:layout_gravity="center"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/cointwo" />
+
+            <TextView
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCrown"
+                android:layout_gravity="center"
+                android:layout_marginStart="185dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/hundread"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/edit_back_ground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="13dp"
+                android:paddingTop="14dp"
+                android:src="@drawable/smallprofile"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="68dp"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:text="@string/Writehere"
+                android:textColor="@color/hintTextColor"
+                android:textSize="12sp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="75dp"
+                android:textColor="@color/hintTextColor"
+                android:paddingEnd="16dp"
+                android:paddingBottom="7dp"
+                android:text="@string/fifty" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="29dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <TextView
+                style="@style/Text20Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/SetMilestone"
+                android:textSize="20sp" />
+
+            <SeekBar
+                style="@style/AppSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="50"
+                android:layout_marginTop="29dp"
+                android:max="100"
+                android:thumb="@drawable/thumb"
+                android:progressDrawable="@drawable/yellow_seek_bar_progress"
+                />
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginHorizontal="16dp"
+                android:text="@string/Giftxs_5" />
+
+            <TextView
+                style="@style/Text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:textSize="12sp"
+                android:text="@string/Gifts_100"/>
+
+
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/flAllowMircophone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_gradient">
+
+            <TextView
+                style="@style/Text16Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="13dp"
+                android:drawablePadding="10dp"
+                android:text="Tag Gift" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

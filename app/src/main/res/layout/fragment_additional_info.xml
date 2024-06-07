@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="org.meetcute.viewModel.BasicInfoViewModel" />
+
+        <import type="android.view.View"/>
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/flNext"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="24dp"
+                tools:context=".fragments.BasicInfoFragment">
+
+                <org.meetcute.view.customViews.AppEditTextMessage
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextHint="Write Something about your self........."
+                    app:isTitle="true"
+                    app:editTextModelMessage="@{viewModel.about}"
+                    app:title="About Yourself (max 100 words)" />
+
+                <TextView
+                    style="@style/Text16Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="24dp"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/add_your_features_physique" />
+
+                <org.meetcute.view.customViews.AppEditTextDropDown
+                    android:id="@+id/etLanguages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    app:editTextHint="Vietnamese"
+                    app:editTextModelDropDown="@{viewModel.language}"
+                    app:isTitle="true"
+                    app:title="Language You Speak" />
+
+                <org.meetcute.view.customViews.AppEditTextDropDown
+                    android:id="@+id/etFigureType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextModelDropDown="@{viewModel.figureType}"
+                    app:editTextHint="work.sythongnguyen@g"
+                    app:isTitle="true"
+                    app:title="Figure Type" />
+
+                <org.meetcute.view.customViews.AppEditTextDropDown
+                    android:id="@+id/etHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextHint="157 cm"
+                    app:editTextModelDropDown="@{viewModel.height}"
+                    app:isTitle="true"
+                    app:title="Your Height (in cm)" />
+
+                <org.meetcute.view.customViews.AppEditTextDropDown
+                    android:id="@+id/etWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextModelDropDown="@{viewModel.weight}"
+                    app:editTextHint="55 kg"
+                    app:isTitle="true"
+                    app:title="Your Weight (kg)" />
+
+                <org.meetcute.view.customViews.AppEditTextDropDown
+                    android:id="@+id/etProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextModelDropDown="@{viewModel.profession}"
+                    app:editTextHint="Model"
+                    app:isTitle="true"
+                    app:title="Your Profession" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <org.meetcute.view.customViews.AppButton
+            android:id="@+id/flNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:buttonText="Next"
+            android:onClick="@{()->viewModel.additionalInfo()}"
+            app:isIcon="true" />
+
+    </RelativeLayout>
+
+</layout>

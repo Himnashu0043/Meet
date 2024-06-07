@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="authViewModel"
+            type="org.meetcute.viewModel.AuthViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".view.activities.SignUpActivity">
+
+        <ImageView
+            android:layout_width="164dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/meetcute_small" />
+
+        <TextView
+            style="@style/Text24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="@string/enter_otp" />
+
+        <TextView
+            style="@style/Text16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="@string/enter_the_4_digit_code_sent_to_your_mail" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tvEmailAddress"
+                style="@style/Text16Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="sharnya@yourdomain.com" />
+
+            <TextView
+                android:id="@+id/tvEdit"
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="4dp"
+                android:text="Edit"
+                android:textColor="@color/primaryTwo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/etOne"
+                style="@style/EditText"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:fontFamily="@font/reguler"
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="phone"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/etTwo"
+                style="@style/EditText"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="12dp"
+                android:fontFamily="@font/reguler"
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="phone"
+                android:paddingHorizontal="16dp" />
+
+
+            <EditText
+                android:id="@+id/etThree"
+                style="@style/EditText"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/reguler"
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="phone"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/etFour"
+                style="@style/EditText"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:fontFamily="@font/reguler"
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="phone"
+                android:paddingHorizontal="16dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Text16ItalicLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="@{authViewModel.countDownTime}"
+            android:visibility="@{(authViewModel.countDownTime != null) ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:id="@+id/tvResend"
+            style="@style/Text16Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Resend"
+            android:visibility="@{(authViewModel.countDownTime != null) ? View.GONE : View.VISIBLE}" />
+
+
+    </LinearLayout>
+
+</layout>

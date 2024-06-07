@@ -1,0 +1,186 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MeetCute" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MeetCute" parent="Base.Theme.MeetCute" />
+
+
+    <style name="Text24">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/reguler</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/reguler</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="Text20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/reguler</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text20Bold">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="Text16ItalicLight">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/light_italic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text16Bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text16Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text14">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/reguler</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text14Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="Text14Bold">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text10Italic">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/light_italic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text14italic">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/light_italic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/reguler</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text12Italic">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/light_italic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppButton">
+        <item name="android:background">@drawable/button_gradient</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:textColorHint">@color/hintTextColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:fontFamily">@font/reguler</item>
+    </style>
+
+    <style name="EditTextNew">
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:textColorHint">@color/hintTextColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:fontFamily">@font/reguler</item>
+    </style>
+
+
+    <style name="TransparentActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="windowMinWidthMajor">80%</item>
+        <item name="windowMinWidthMinor">80%</item>
+    </style>
+
+    <style name="CustomTabItemStyle" parent="Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/reguler</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item> <!-- Change the text size as needed -->
+    </style>
+
+    <style name="CustomTabItemStyleSelected" parent="Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item> <!-- Change the text size as needed -->
+    </style>
+
+    <style name="OutlinedRoundBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+    </style>
+
+    <style name="AppSeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/seek_bar_progress</item>
+        <item name="android:indeterminateDrawable">@drawable/seek_bar_progress</item>
+        <item name="android:thumb">@drawable/thumb</item>
+        <item name="android:thumbOffset">12dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:splitTrack">false</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="service_10_imge_shapeable_overloay">
+        <item name="cornerSize">10%</item>
+        <item name="cornerSizeTopLeft">10%</item>
+        <item name="cornerSizeTopRight">10%</item>
+    </style>
+
+</resources>

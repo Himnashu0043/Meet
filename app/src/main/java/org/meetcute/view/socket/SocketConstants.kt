@@ -1,0 +1,41 @@
+package org.meetcute.view.socket
+
+object SocketConstants {
+    const val SOCKET_URI = "http://13.58.147.138:8082"
+    const val EVENT_ROOM_JOIN = "Join-Chat-Room"
+    const val EVENT_ROOM_LISTEN = "Room-Join-Status"
+    const val EVENT_SEND_MESSAGE = "Send-Message"
+    const val EVENT_LISTEN_MESSAGE = "Get-New-Message"
+    const val EVENT_RECEIVED_BROADCAST_GIFT = "Received-Broadcast-Gift"
+    const val EVENT_CONTEST_START = "Contest-Start"
+    const val EVENT_CONTEST_UPDATED_RANKING = "Contest-Updated-Ranking"
+    const val EVENT_VIDEO_REQUEST = "Video-Request"
+    const val MESSAGE = "message"
+    const val ROOM_ID = "roomId"
+    const val SEND_BY = "sentBy"
+    const val SEND_VIDEO_REQUEST = "Send-Video-Request"
+    const val TAG_GIFT = "Tag-Gift"
+    const val EVENT_RECEIVED_VIDEO_GIFT = "Received-Video-Gift"
+    const val EVENT_PREMIUM_BROADCAST_MINUTE = "Premium-Broadcast-Minute"
+    const val EVENT_VIDEO_CALL_MINUTE = "Video-Call-Minute"
+    const val VIEWER = "viewer"
+    const val LIVE_COUNT = "Live-Count"
+    const val BROADCASTER_ID = "broadcaster"
+    const val BROADCASTER = "broadcastId"
+    const val BROADCASTER1 = "broadcasterId"
+    const val VIEWER_ID = "viewerId"
+    const val GIFTID = "giftId"
+    const val MILE_STONE = "mileStone"
+    const val JOIN_BROADCAST_ROOM = "Join-Broadcast-Room"
+    const val JOIN_USER_ROOM = "Join-User-Room"
+    const val START_BROADCAST_CONTEST = "Start-Broadcast-Contest"
+    const val IS_TYPING = "Is_Typing"
+    const val STOP_BROADCAST_CONTEST = "Stop-Broadcast-Contest"
+    const val EVENT_ANSWER_CALL = "Answer-Call"
+    const val EVENT_END_CALL = "End-Call"
+    const val MESSAGE_READ = "message_read"
+    const val ROOM_JOIN_STATUS = "Room-Join-Status"
+
+
+
+}

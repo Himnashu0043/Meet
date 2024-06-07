@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_backgournd"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/verify_one" />
+
+        <TextView
+            style="@style/Text24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/allow_microphone" />
+
+        <TextView
+            style="@style/Text16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/this_is_necessary_for_video_calls" />
+
+        <FrameLayout
+            android:id="@+id/flAllowMircophone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_gradient">
+
+            <TextView
+                style="@style/Text16Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="13dp"
+                android:drawablePadding="10dp"
+                android:text="@string/allow_microphone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flDontAllow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/gradient_stroke_24dp">
+
+            <TextView
+                style="@style/Text16Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="13dp"
+                android:drawablePadding="10dp"
+                android:text="Don't Allow" />
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

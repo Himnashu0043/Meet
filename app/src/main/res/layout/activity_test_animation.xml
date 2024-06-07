@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/ivTwo"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:background="@drawable/circle_fade_gradient"
+            android:elevation="2dp" />
+
+        <View
+            android:id="@+id/ivOne"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle_fade_gradient"
+            android:elevation="3dp" />
+
+        <ImageView
+            android:id="@+id/ivContent"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"
+            android:elevation="4dp"
+            android:src="@drawable/video" />
+    </RelativeLayout>
+</layout>

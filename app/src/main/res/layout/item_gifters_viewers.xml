@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:elevation="1dp"
+            android:src="@drawable/green_circle"
+            app:layout_constraintBottom_toBottomOf="@id/ivVideoCall"
+            app:layout_constraintEnd_toEndOf="@id/ivVideoCall" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivVideoCall"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/home_profile"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvVideoName"
+            style="@style/Text20Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/HannaKoisy"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/ivSmallCoin"
+            app:layout_constraintStart_toEndOf="@id/ivVideoCall"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvVideCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="1 min ago"
+            android:visibility="gone"
+            android:textColor="#C5CEE0"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvVideoName"
+            app:layout_constraintTop_toBottomOf="@id/tvVideoName" />
+
+        <ImageView
+            android:id="@+id/ivSmallCoin1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/coin"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMin"
+            app:layout_constraintStart_toStartOf="@+id/tvVideoName"
+            app:layout_constraintTop_toTopOf="@+id/tvMin" />
+
+        <TextView
+            android:id="@+id/tvMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="2dp"
+            android:text="@string/hundread"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/ivSmallCoin1"
+            app:layout_constraintTop_toBottomOf="@+id/tvVideoName" />
+
+        <org.meetcute.view.customViews.VideoCallImage
+            android:id="@+id/ivSmallCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvSendGreetings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tvSendGreetings"
+            style="@style/Text12"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/stroke_gradient_24"
+            android:paddingHorizontal="7dp"
+            android:text="Send Greetings"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

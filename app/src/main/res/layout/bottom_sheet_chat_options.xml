@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_background"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="12dp"
+            android:src="@drawable/cross"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ivDelete"
+            style="@style/Text16Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="20dp"
+            android:gravity="start"
+            android:paddingVertical="12dp"
+            android:text="Delete Chat"
+            app:drawableEndCompat="@drawable/right_arrow_white"
+            app:drawableStartCompat="@drawable/delete_white" />
+
+        <TextView
+            android:id="@+id/ivMuteNotification"
+            style="@style/Text16Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="20dp"
+            android:gravity="start"
+            android:paddingVertical="12dp"
+            android:text="Mute Notification"
+            app:drawableEndCompat="@drawable/right_arrow_white"
+            app:drawableStartCompat="@drawable/mute_notification" />
+
+
+        <TextView
+            android:id="@+id/ivFollow"
+            style="@style/Text16Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="20dp"
+            android:gravity="start"
+            android:paddingVertical="12dp"
+            android:text="Follow"
+            app:drawableEndCompat="@drawable/right_arrow_white"
+            app:drawableStartCompat="@drawable/follow" />
+
+        <TextView
+            android:id="@+id/ivBlock"
+            style="@style/Text16Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="20dp"
+            android:gravity="start"
+            android:paddingVertical="12dp"
+            android:text="Block"
+            app:drawableEndCompat="@drawable/right_arrow_white"
+            app:drawableStartCompat="@drawable/block_white" />
+
+
+        <TextView
+            android:id="@+id/ivReport"
+            style="@style/Text16Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:drawablePadding="20dp"
+            android:gravity="start"
+            android:paddingVertical="12dp"
+            android:text="Report"
+            app:drawableEndCompat="@drawable/right_arrow_white"
+            app:drawableStartCompat="@drawable/report_white" />
+
+
+    </LinearLayout>
+</layout>

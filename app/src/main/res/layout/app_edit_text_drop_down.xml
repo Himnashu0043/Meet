@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="org.meetcute.appUtils.EditTextModel" />
+
+        <import type="android.view.View" />
+
+        <import type="org.meetcute.appUtils.EditTextModel" />
+    </data>
+
+    <merge>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:background="#040408"
+            android:elevation="0.1dp"
+            android:paddingHorizontal="4dp"
+            android:text="Email"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/drop_down"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingHorizontal="16dp"
+            android:text="@={model.text}" />
+
+        <TextView
+            android:id="@+id/tvError"
+            style="@style/Text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="2dp"
+            android:paddingHorizontal="4dp"
+            android:text="@={model.error}"
+            android:textColor="@color/red"
+            android:visibility="@{model.error == null ? View.GONE:View.VISIBLE}" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/Text14"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/red" />
+
+    </merge>
+</layout>

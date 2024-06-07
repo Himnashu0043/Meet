@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/loop_video"
+        tools:context=".activities.UploadLoopVideoActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ivBackground"
+            />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_indicator"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/home_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/Text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Stella Malone"
+            app:layout_constraintStart_toEndOf="@id/ivProfile"
+            app:layout_constraintTop_toTopOf="@id/ivProfile" />
+
+        <TextView
+            android:id="@+id/tvAge"
+            style="@style/Text12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="18 years"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="6dp"
+            android:background="@color/unselectedGray"
+            app:layout_constraintBottom_toBottomOf="@id/tvAge"
+            app:layout_constraintStart_toEndOf="@id/tvAge"
+            app:layout_constraintTop_toTopOf="@id/tvAge" />
+
+        <ImageView
+            android:id="@+id/ivCountry"
+            android:layout_width="24dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/korea"
+            app:layout_constraintBottom_toBottomOf="@id/tvAge"
+            app:layout_constraintStart_toEndOf="@id/viewDivider" />
+
+        <TextView
+            android:id="@+id/tvCountry"
+            style="@style/Text12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="Korea"
+            app:layout_constraintStart_toEndOf="@id/ivCountry"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+        <ImageView
+            android:id="@+id/ivCross"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_fade"
+            android:padding="10dp"
+            android:src="@drawable/cross"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivProfile" />
+
+
+        <org.meetcute.view.customViews.AppButton
+            android:id="@+id/btnUploadLoop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="20dp"
+            app:buttonText="Upload Loop Video"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

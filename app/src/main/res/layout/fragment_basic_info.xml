@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="org.meetcute.viewModel.BasicInfoViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/flNext"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="24dp"
+                tools:context=".fragments.BasicInfoFragment">
+
+                <org.meetcute.view.customViews.AppEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextHint="work.sythongnguyen@g"
+                    app:editTextModel="@{viewModel.nameModel}"
+                    app:isTitle="true"
+                    app:title="Name" />
+
+                <org.meetcute.view.customViews.AppEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextHint="work.sythongnguyen@g"
+                    app:editTextModel="@{viewModel.userNameModel}"
+                    app:isTitle="true"
+                    app:title="Username" />
+
+                <org.meetcute.view.customViews.AppEditTextCountry
+                    android:id="@+id/selectCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="18dp"
+                    app:editTextHint="work.sythongnguyen@g"
+                    app:editTextModelCountry="@{viewModel.countryModel}"
+                    app:isTitle="true"
+                    app:title="Select Country" />
+
+                <TextView
+                    style="@style/Text16Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Gender" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="24dp">
+
+                    <LinearLayout
+                        android:id="@+id/llMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:onClick="@{()->viewModel.maleClicked()}"
+                        android:orientation="vertical">
+
+                        <org.meetcute.view.customViews.RippleBackground
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:rb_color="#0099CC"
+                            app:rb_duration="3000"
+                            app:rb_radius="6dp"
+                            app:rb_rippleAmount="3"
+                            app:rb_scale="6">
+
+                            <ImageView
+                                android:id="@+id/ivMale"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/male_selector"
+                                app:isSelected="@{viewModel.maleSelected}" />
+
+                        </org.meetcute.view.customViews.RippleBackground>
+
+
+                        <TextView
+                            style="@style/Text12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="Male" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:onClick="@{()->viewModel.femaleClicked()}"
+                        android:orientation="vertical">
+
+                        <org.meetcute.view.customViews.RippleBackground
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            app:rb_color="#0099CC"
+                            app:rb_duration="3000"
+                            app:rb_radius="6dp"
+                            app:rb_rippleAmount="3"
+                            app:rb_scale="6">
+
+                            <ImageView
+                                android:id="@+id/ivFemale"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/female_selector"
+                                app:isSelected="@{viewModel.femaleSelected}" />
+
+                        </org.meetcute.view.customViews.RippleBackground>
+
+                        <TextView
+                            style="@style/Text12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:text="Female" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/Text16Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Date of Brith" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp">
+
+                    <org.meetcute.view.customViews.AppEditTextDropDown
+                        android:id="@+id/date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        app:editTextHint="26"
+                        app:editTextModelDropDown="@{viewModel.dateModel}"
+                        app:isTitle="true"
+                        app:title="Date" />
+
+                    <org.meetcute.view.customViews.AppEditTextDropDown
+                        android:id="@+id/month"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_weight="1"
+                        app:editTextHint="Aug"
+                        app:editTextModelDropDown="@{viewModel.monthModel}"
+                        app:isTitle="true"
+                        app:title="Month" />
+
+                    <org.meetcute.view.customViews.AppEditTextDropDown
+                        android:id="@+id/year"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1.5"
+                        app:editTextHint="1996"
+                        app:editTextModelDropDown="@{viewModel.yearModel}"
+                        app:isTitle="true"
+                        app:title="Year" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    style="@style/Text14Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="24dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Date of Brith"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <org.meetcute.view.customViews.AppButton
+            android:id="@+id/flNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="@{()-> viewModel.basicInfo()}"
+            app:buttonText="Next"
+            app:isIcon="true" />
+
+    </RelativeLayout>
+
+
+</layout>

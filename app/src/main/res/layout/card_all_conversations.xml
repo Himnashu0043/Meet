@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="16dp"
+            android:elevation="1dp"
+            android:layout_height="16dp"
+            android:background="@drawable/green_circle"
+            app:layout_constraintBottom_toBottomOf="@id/ivprofilentification"
+            app:layout_constraintEnd_toEndOf="@id/ivprofilentification"
+
+            />
+
+        <ImageView
+            android:id="@+id/ivprofilentification"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/home_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            style="@style/Text16Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Endedbroadcast"
+            app:layout_constraintStart_toEndOf="@id/ivprofilentification"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/mintime"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvFirstName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvFirstName" />
+
+        <TextView
+            android:id="@+id/tvVideCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/loremipsumestbetfjksadiqluw"
+            android:textColor="#C5CEE0"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ivprofilentification"
+            app:layout_constraintStart_toStartOf="@id/tvFirstName"
+            app:layout_constraintTop_toBottomOf="@id/tvFirstName" />
+
+        <FrameLayout
+            android:id="@+id/flUnreadCount"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="17dp"
+            android:background="@drawable/green_circle"
+            android:backgroundTint="@color/red"
+            app:layout_constraintBottom_toBottomOf="@id/tvVideCall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvVideCall">
+
+            <TextView
+                android:id="@+id/tvCount"
+                style="@style/Text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/Four"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMin" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/dividerTwo"
+            app:layout_constraintStart_toStartOf="@id/tvFirstName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

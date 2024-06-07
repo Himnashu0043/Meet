@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="org.meetcute.appUtils.EditTextModel" />
+
+        <import type="android.view.View" />
+
+        <import type="org.meetcute.appUtils.EditTextModel" />
+    </data>
+
+
+    <merge>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etLayout"
+            style="@style/OutlinedRoundBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeErrorColor="@color/red"
+            android:textColorHint="@color/edit_text_stroke_color"
+            app:boxStrokeColor="@color/edit_text_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:counterTextColor="@color/white"
+            app:cursorColor="@color/primaryTwo"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText"
+                style="@style/EditTextNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={model.text}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/tvError"
+            style="@style/Text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etLayout"
+            android:layout_marginTop="2dp"
+            android:paddingHorizontal="4dp"
+            android:text="@{model.error}"
+            android:textColor="@color/red"
+            android:visibility="@{model.error != null ? View.VISIBLE : View.GONE}" />
+
+    </merge>
+</layout>

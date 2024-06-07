@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <TextView
+        style="@style/Text14"
+        android:id="@+id/tvHashtags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@drawable/drawable_hashtag"
+        android:paddingHorizontal="8dp"
+        android:drawablePadding="8dp"
+        android:drawableEnd="@drawable/cross"
+        android:paddingVertical="1dp"
+        android:text="#Trending" />
+</layout>

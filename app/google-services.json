@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "106653235161",
+    "project_id": "meet-cute-3b607",
+    "storage_bucket": "meet-cute-3b607.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106653235161:android:f8ef4e72fd6617d0d0cbc8",
+        "android_client_info": {
+          "package_name": "org.meetcute"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8aad--VPPg5MOMrdac5R_bwoVvfavrE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

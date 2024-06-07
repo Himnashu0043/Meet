@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="org.meetcute.viewModel.BasicInfoViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.UploadPhotoFragment">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Text24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Upload Profile Photo" />
+
+        <RelativeLayout
+            android:id="@+id/rlUpload"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            android:layout_below="@id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/primary_one_stroke"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/upload" />
+
+                <TextView
+                    style="@style/Text16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Upload Photo"
+                    android:textColor="@color/pink" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/rlUpload"
+            android:layout_alignTop="@id/rlUpload"
+            android:layout_alignEnd="@id/rlUpload"
+            android:layout_alignBottom="@id/rlUpload"
+            android:src="@drawable/uploaded_img"
+            android:visibility="@{viewModel.imageUrl == null ? View.GONE :View.VISIBLE}"
+            app:loadCircleImage="@{viewModel.imageUrl}" />
+
+        <TextView
+            android:id="@+id/tvFileFormat"
+            style="@style/Text14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlUpload"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Files support: JPG, PNG"
+            android:textColor="@color/infoTextColor" />
+
+        <TextView
+            android:id="@+id/tvChangePhoto"
+            style="@style/Text16Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFileFormat"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke_gradient"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:text="Change photo"
+            android:visibility="@{viewModel.imageUrl == null ? View.GONE : View.VISIBLE}"
+            app:drawableStartCompat="@drawable/image_icon" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!--<TextView
+                android:id="@+id/tvSkip"
+                style="@style/Text16Bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/app_button_stoke"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:text="Skip" />-->
+
+            <org.meetcute.view.customViews.AppButton
+                android:id="@+id/flNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->viewModel.uploadProfile()}"
+                app:buttonText="Next"
+                app:isIcon="true"
+                app:setEnabled="@{viewModel.imageUrl}" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

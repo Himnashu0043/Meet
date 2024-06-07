@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_spacing">8dp</dimen>
+    <dimen name="grid_spacing_loop">1dp</dimen>
+    <dimen name="grid_spacing_basic_info">5dp</dimen>
+    <dimen name="grid_spacing_hash_tags">4dp</dimen>
+</resources>

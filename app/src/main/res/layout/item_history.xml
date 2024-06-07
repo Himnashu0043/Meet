@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lay"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDayTag"
+            style="@style/Text16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingVertical="12dp"
+            android:text="Today"
+            android:textColor="@color/hintTextColor"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlPerformer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                android:src="@drawable/home_profile" />
+
+            <ImageView
+                android:id="@+id/ivStatus"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignEnd="@id/ivProfile"
+                android:layout_alignBottom="@id/ivProfile"
+                android:src="@drawable/green_circle" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/Text20Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/ivProfile"
+                android:text="Hanna Koisy" />
+
+            <ImageView
+                android:id="@+id/ivCallType"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/tvTitle"
+                android:layout_alignStart="@id/tvTitle"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/video_dot_history" />
+
+            <TextView
+                android:id="@+id/tvCallType"
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:layout_alignTop="@id/ivCallType"
+                android:layout_alignBottom="@id/ivCallType"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/ivCallType"
+                android:gravity="center"
+                android:text="Video Call"
+                android:textColor="@color/secondaryColor" />
+
+
+            <ImageView
+                android:id="@+id/ivCoin"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/tvTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@id/tvCallType"
+                android:src="@drawable/coin" />
+
+            <TextView
+                android:id="@+id/tvCoins"
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:layout_alignTop="@id/ivCoin"
+                android:layout_alignBottom="@id/ivCoin"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/ivCoin"
+                android:gravity="center"
+                android:text="650"
+                android:textColor="@color/secondaryColor" />
+
+
+            <TextView
+                android:id="@+id/tvTimeAgo"
+                style="@style/Text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvTitle"
+                android:layout_alignBottom="@id/tvTitle"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="45m ago" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</layout>

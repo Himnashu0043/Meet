@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:elevation="2dp"
+            android:id="@+id/ivOnline"
+            android:src="@drawable/green_circle"
+            app:layout_constraintBottom_toBottomOf="@id/rlProfile"
+            app:layout_constraintEnd_toEndOf="@id/rlProfile" />
+
+        <RelativeLayout
+            android:id="@+id/rlProfile"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="1dp"
+            android:background="@drawable/top_gifter_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="56dp"
+            android:layout_height="56dp"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivprofilelive"
+            android:layout_width="0dp"
+            android:src="@drawable/home_profile"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            app:layout_constraintBottom_toBottomOf="@id/rlProfile"
+            app:layout_constraintStart_toStartOf="@id/rlProfile"
+            app:layout_constraintTop_toTopOf="@id/rlProfile"
+            app:layout_constraintEnd_toEndOf="@id/rlProfile"
+            android:layout_height="0dp"/>
+
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            style="@style/Text20Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/HannaKoisy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivSmallCoin"
+            app:layout_constraintStart_toEndOf="@id/rlProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivSmallCoin"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/coin"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMin"
+            app:layout_constraintEnd_toStartOf="@+id/tvMin"
+            app:layout_constraintTop_toTopOf="@+id/tvMin" />
+
+        <TextView
+            android:id="@+id/tvMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/hundread"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFirstName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFirstName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

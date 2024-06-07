@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Text16Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Broadcast History" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBroadcast"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="88dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_broadcast_history" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGoLive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/go_live"
+            android:orientation="horizontal">
+
+            <org.meetcute.view.customViews.RippleBackground
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:rb_color="#E50914"
+                app:rb_duration="700"
+                app:rb_radius="8dp"
+                app:rb_rippleAmount="1"
+                app:rb_scale="3.5"
+                app:rb_type="fillRipple">
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/video_call" />
+
+            </org.meetcute.view.customViews.RippleBackground>
+
+
+            <TextView
+                style="@style/Text16Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:text="Go Live" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBroadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:src="@drawable/broadcast"
+                app:tint="#34333A" />
+
+            <TextView
+                style="@style/Text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="6dp"
+                android:gravity="center"
+                android:text="@string/no_broadcaster_yet"
+                android:textColor="@color/unselectedGray" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

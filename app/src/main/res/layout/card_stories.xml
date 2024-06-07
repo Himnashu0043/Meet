@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp">
+
+
+        <ImageView
+            android:id="@+id/ivAddStory"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/green_circle"
+            android:backgroundTint="#34333A"
+            android:padding="20dp"
+            android:src="@drawable/plus_icon" />
+
+        <ImageView
+            android:id="@+id/ivStories"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/stroies_selector"
+            android:padding="2dp"
+            android:src="@drawable/home_profile"
+            tools:ignore="MissingConstraints" />
+
+
+    </RelativeLayout>
+</layout>

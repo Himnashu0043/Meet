@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Text16Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivBack"
+            android:layout_alignBottom="@id/ivBack"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/video_call_setting" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:src="@drawable/history" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ivBack"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/corner_16"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="26dp">
+
+                <TextView
+                    android:id="@+id/tvVideoCallRate"
+                    style="@style/Text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video Call Rate" />
+
+                <ImageView
+                    android:id="@+id/ivCoin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@id/tvCoin"
+                    android:layout_alignBottom="@id/tvCoin"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/coin" />
+
+                <TextView
+                    android:id="@+id/tvCoin"
+                    style="@style/Text24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvVideoCallRate"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toEndOf="@id/ivCoin"
+                    android:text="150" />
+
+                <TextView
+                    style="@style/Text16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tvCoin"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/tvCoin"
+                    android:text="Coins/m" />
+
+
+                <ImageView
+                    android:id="@+id/ivEditCallRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/edit_writings" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/Text16Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Loop Videos" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="34dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:elevation="4dp"
+                            android:padding="12dp"
+                            android:src="@drawable/edit_writings" />
+
+                        <ImageView
+                            android:id="@+id/ivEditThumbnail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="234dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dummy_image" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        style="@style/Text14Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/thumbnail_loop_video" />
+
+                    <TextView
+                        style="@style/Text10Italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/this_will_be_visible_when_user_checkout_your_profile" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="16dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:elevation="4dp"
+                            android:padding="12dp"
+                            android:src="@drawable/edit_writings" />
+
+                        <ImageView
+                            android:id="@+id/ivEditCallingLoop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="234dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dummy_image" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        style="@style/Text14Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/calling_loop_video" />
+
+                    <TextView
+                        style="@style/Text10Italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/user_will_be_able_to_view_while_connecting_the_call" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>
